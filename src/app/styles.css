@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+div.anime-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #2e51a2;
+    width: 100%;
+}
+
+form.search-bar > label {
+    display: block;
+    text-align: center;
+    font: bold 2em sans-serif;
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+div.anime-display {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+div.anime {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div.anime img {
+    margin: auto;
+    width: 200px;
+}
+
+div.anime-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.anime-info > * {
+    margin: 0 0 5px;
+}
