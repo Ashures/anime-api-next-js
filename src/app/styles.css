@@ -29,6 +29,32 @@ form.search-bar > label {
     color: #FFF;
 }
 
+div.search {
+    display: flex;
+    position: relative;
+    height: 30px;
+}
+
+div.search #search {
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+}
+
+div.search #btn {
+    box-sizing: initial;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    border: 5px solid #2e51a2;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 div.anime-display {
     padding: 30px;
     display: grid;
@@ -41,8 +67,11 @@ div.anime {
     grid-template-columns: repeat(2, 1fr);
 }
 
-div.anime img {
+div.anime a {
     margin: auto;
+}
+
+div.anime img {
     width: 200px;
 }
 
@@ -50,8 +79,26 @@ div.anime-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
 }
 
 div.anime-info > * {
     margin: 0 0 5px;
+}
+
+@media (max-width: 900px) {
+    div.anime-display {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    div.anime img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    div.anime-info h1 {
+        font-size: 1.5em;
+    }
 }
